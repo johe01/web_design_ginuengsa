@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{min-width: 100%; vertical-align: top;}
+table{width: 100%; border-collapse: collapse;}
+button{cursor: pointer;}
+body{background: #fff; color: #333333;}
+
+.inner{width: 1200px; margin: auto;}
+header{height: 100px; background: #ceb398; position: relative; padding-top: 35px;}
+
+.slide{height: 300px; background: #fc6; position: relative; overflow: hidden;} /* 슬라이드 띠 */
+
+.con{height: 200px; background: #369; display: flex;}
+.con article{width: 400px;}
+.con article:nth-child(2) {background-color: #fff;}
+
+footer{height: 100px;background: #333; color: #fff; position: relative; padding-top: 25px; padding-left: 20px;
+display: flex; gap: 30px;} 
+
+/* 여기까지 A 유형 레이아웃 */
+
+header .logo a img {
+    width: 200px;
+    height: 40px;
+    min-width: 0;
+}
+
+nav {position: absolute;top: 0;right: 0;}
+nav>ul{display: flex;}
+nav>ul>li>a{
+    display: block; 
+    width: 120px; 
+    background: #fff; 
+    text-align: center; 
+    font-weight: bold;
+    padding: 10px;
+}
+nav>ul>li:hover>a,
+nav>ul>li>a:focus,
+nav>ul>li.on>a {background: #ceb398; color: #fff;}
+
+.sub li a{display: block; padding: 5px; text-align: center; font-size: 14px; color: #fff;}
+.sub li a{display: none;}
+.sub li a:hover,
+.sub li a:focus {background: #f3e2d2;}
+
+.slide ul{
+    /* position: absolute;  */
+    top: 0;
+    left: 0;
+    height: 900px;
+}
+.slide ul li {width: 1200px;height: 300px; position: relative;}
+.slide ul li a{display: block; height: 100%; }
+.slide ul li.s1{background: url(../img/slide1.jpg) no-repeat center/cover;}
+.slide ul li.s2{background: url(../img/slide2.jpg) no-repeat center/cover;}
+.slide ul li.s3{background: url(../img/slide3.jpg) no-repeat center/cover;}
+.slide ul li h2 {background: #ceb398; position: absolute; top: 50%; left: 50%; font-size: 28px;
+font-weight: bold; border-radius: 30px; padding: 20px; transform: translate(-50%, -50%);}
+
+.con1 {position: relative;}
+.con1 .tabmenu{
+    display: flex;
+}
+.con1 .tabmenu>li{width: 150px; background: #fcf0ea;}
+.con1 .tabmenu>li.on{background: #ceb398; color: #fff;}
+.con1 .tabmenu>li>h2>a{display: block; text-align: center; padding: 10px 0; font-weight: bold;}
+
+.con1 .tabcon{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+/* .notice {display: none;} */
+.notice th{text-align: left; color: #fff;}
+.notice td{color: #fff;}
+.notice tr{border-bottom: 1px dashed #fff;}
+.notice a {padding: 5px; display: block; width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.gall{
+    display: none;
+    padding-top: 30px;
+}
+.gall ul{ display: flex; gap: 10px; justify-content: center;}
+
+.con2{padding: 10px;}
+.con2 a{
+    display: block;
+    height: 100%;
+    background: url(../img/banner.jpg) center/cover;
+    border-radius: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.con2 div{background: rgb(206, 179,152,.8);}
+.con2 h2{margin-bottom: 10px;}
+.con2 p{background: #333; text-align: center; color: #fff; display: inline-block; font-size: 13px; margin-top: 20px;}
+
+.con3 {
+    padding: 10px;
+}
+.con3 h2{color:#ceb398; margin-top: 20px;}
+.con3 ul {display: flex; text-align: center; gap: 20px; justify-content: center;}
+.con3 ul li a{display: block; height: 100%;}
+.con3 ul li p{ padding-top: 20px;}
+.con3 ul li span {margin-top: 10px; display: block; font-weight: bold;}
+
+.flogo img {
+    width: 200px;
+    height: 40px;
+    min-width: 0;
+    filter: grayscale(100%);
+}
+.fsns{display: flex; gap: 10px; position: absolute; top: 20px; right: 20px;}
+.fsns li a{
+    display: block; 
+    width: 30px; 
+    height: 30px; 
+    text-align: center; 
+    padding-top: 3px;
+    gap: 10px;
+}
+/* .fsns li:nth-child(1) a{background: #3f5b9a;} */
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+#modal .inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close .inner .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+#modal .card h1 {
+    margin-bottom: 20px;
+    font-style: 24px;
+    
+}
+
+#modal .card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#modal .close {
+    background-color: #ceb398;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
