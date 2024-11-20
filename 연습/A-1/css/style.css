@@ -28,7 +28,7 @@ header .logo a img {
     min-width: 0;
 }
 
-nav {position: absolute;top: 0;right: 0;}
+nav {position: absolute;top: 0;right: 0; z-index: 10;}
 nav>ul{display: flex;}
 nav>ul>li>a{
     display: block; 
@@ -41,14 +41,14 @@ nav>ul>li>a{
 nav>ul>li:hover>a,
 nav>ul>li>a:focus,
 nav>ul>li.on>a {background: #ceb398; color: #fff;}
-
-.sub li a{display: block; padding: 5px; text-align: center; font-size: 14px; color: #fff;}
-.sub li a{display: none;}
+.sub {display: none;}
+.sub li a{ display: block; padding: 5px; text-align: center; font-size: 14px; background: #fff;}
+/* .sub li a{display: none;} */
 .sub li a:hover,
 .sub li a:focus {background: #f3e2d2;}
 
 .slide ul{
-    /* position: absolute;  */
+    position: absolute; 
     top: 0;
     left: 0;
     height: 900px;
