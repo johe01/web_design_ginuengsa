@@ -89,6 +89,12 @@ header nav .sub-menu > li a:hover {
     /* 세로 슬라이드 */
     /* flex-direction: column; */
 }
+
+/* .slide-container .slide {
+    width: 1200px;
+    height: 300px;
+} */
+
 .slide-container .slide img{
     width: 1200px;
     height: 100%;
@@ -101,18 +107,78 @@ header nav .sub-menu > li a:hover {
     grid-template-rows: 200px;
 }
 
-.tab-menu {}
-.tab-menu  .tab-item {}
-.tab-menu  .tab-item a {}
 
-.tab-menu  .tab-item:hover,
-.tab-menu  .tab-item.active {}
+.tab-menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.tab-menu  .menu-item {
+    border-bottom-width: 0;
+    width: 100px;
+    height: calc(40px - 2px);
+    line-height: calc(40px -2px);
+    text-align: center;
+}
+.tab-menu  .menu-item a {
+    display: inline-block;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.tab-menu  .menu-item:hover,
+.tab-menu  .menu-item.active {
+    background-color: skyblue;
+}
 
 
-.tab-content {} 
+.tab-content {
+    position: relative;
+    top: -2px;
+} 
 .tab-content .tab-item{} 
-.tab-content .tab-item ul li a{}
+.tab-content .tab-item ul li a{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
 
-.tab-content .tab-item ul li:nth-of-type(odd){}
+.tab-content .content-item ul li:nth-of-type(odd){
+    background-color: #eeeeee;
+}
 .tab-content .tab-item ul li:nth-of-type(even){}
-.tab-content .tab-item ul li:hover{}
+.tab-content .tab-item ul li:hover{
+    filter: brightness(90%);
+}
+
+/* .tab-content .content-item table td {
+    padding: 0 10px;
+    box-sizing: border-box;
+} */
+
+
+/* 공지사항 */
+.btn-modal{cursor: pointer;}
+/* 갤러리 */
+/* #content-gallery {
+    display: none;
+} */
+
+.gallery {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc((100% - 300px) / 4);
+}
+
+/* 배너 */
+.banner img { width: 100%;}
+/* 바로가기 */
+.link img {
+    width: 100%;
+}
+
